@@ -38,9 +38,9 @@
       --orange: #f5a623;
       --bg:     #ffffff;
       --bg-lt:  #f6f7f9;
-      --text:   #041a2f;
-      --text-2: #394960;
-      --text-3: #798099;
+      --text:   #111111;
+      --text-2: #1a1a1a;
+      --text-3: #555555;
       --border: #e2e6ed;
       --r-pill: 100px;
       --r-card: 12px;
@@ -49,7 +49,7 @@
     /* READING PROGRESS */
     #read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--blue); z-index: 9999; transition: width .1s linear; border-radius: 0 2px 2px 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; font-size: 16px; }
+    body { font-family: 'Inter', Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.8; -webkit-font-smoothing: antialiased; font-size: 18px; }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
 
@@ -122,23 +122,23 @@
     .takeaways li::before { content: "•"; font-weight: 900; color: var(--blue); flex-shrink: 0; }
 
     /* ARTICLE FLOW */
-    .article-body h2 { font-size: 23px; font-weight: 700; letter-spacing: -.02em; color: var(--navy); margin: 48px 0 14px; scroll-margin-top: 80px; line-height: 1.25; padding-left: 16px; border-left: 3px solid var(--blue); }
-    .article-body h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin: 30px 0 8px; scroll-margin-top: 80px; }
-    .article-body p { font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 14px; }
-    .article-body p strong { color: var(--navy); font-weight: 600; }
-    .article-body ul, .article-body ol { margin: 6px 0 18px 18px; display: flex; flex-direction: column; gap: 6px; }
-    .article-body li { font-size: 14px; color: var(--text-2); line-height: 1.65; }
-    .article-body li strong { color: var(--navy); }
+    .article-body h2 { font-size: 30px; font-weight: 800; letter-spacing: -.025em; color: #111111; margin: 56px 0 16px; scroll-margin-top: 80px; line-height: 1.2; }
+    .article-body h3 { font-size: 21px; font-weight: 700; color: #111111; margin: 36px 0 10px; scroll-margin-top: 80px; }
+    .article-body p { font-size: 18px; color: #1f1f1f; line-height: 1.9; margin-bottom: 20px; }
+    .article-body p strong { color: #111111; font-weight: 700; }
+    .article-body ul, .article-body ol { margin: 6px 0 22px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .article-body li { font-size: 17px; color: #1f1f1f; line-height: 1.75; }
+    .article-body li strong { color: #111111; font-weight: 700; }
 
     /* CALLOUT */
-    .callout { border-left: 3px solid var(--blue); background: #eff4ff; padding: 18px 22px; border-radius: 0 var(--r-sm) var(--r-sm) 0; margin: 28px 0; display: flex; gap: 12px; align-items: flex-start; }
-    .callout::before { content: '"'; font-size: 32px; color: var(--blue); line-height: .9; flex-shrink: 0; font-family: Georgia, serif; opacity: .5; }
-    .callout p { font-size: 15px; font-style: italic; font-weight: 500; color: #1a3b8a; margin: 0; line-height: 1.65; }
+    .callout { border-left: 3px solid var(--blue); background: #eff4ff; padding: 22px 26px; border-radius: 0 var(--r-sm) var(--r-sm) 0; margin: 32px 0; display: flex; gap: 12px; align-items: flex-start; }
+    .callout::before { content: '"'; font-size: 36px; color: var(--blue); line-height: .85; flex-shrink: 0; font-family: Georgia, serif; opacity: .5; }
+    .callout p { font-size: 17px; font-style: italic; font-weight: 500; color: #1a3b8a; margin: 0; line-height: 1.75; }
 
     /* STAT ROW */
     .stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 28px 0; }
     .stat-item { border: 1px solid var(--border); border-radius: var(--r-sm); padding: 20px 16px; text-align: center; background: var(--bg); transition: box-shadow .2s, transform .2s; position: relative; overflow: hidden; }
-    .stat-item::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: var(--blue); border-radius: var(--r-sm) var(--r-sm) 0 0; opacity: .6; }
+    .stat-item::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background: var(--blue); border-radius: var(--r-sm) var(--r-sm) 0 0; opacity: .7; }
     .stat-item:hover { box-shadow: 0 8px 24px -8px rgba(4,26,47,.1); transform: translateY(-2px); }
     .stat-item:hover::before { opacity: 1; }
     .stat-num { font-size: 32px; font-weight: 700; color: var(--navy); letter-spacing: -.03em; line-height: 1; margin-bottom: 5px; }
@@ -148,7 +148,7 @@
     /* TABLE */
     .table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--border); border-radius: var(--r-sm); }
     table { width: 100%; border-collapse: collapse; font-size: 13px; }
-    thead { background: var(--navy); color: #fff; }
+    thead { background: #292524; color: #fef3c7; }
     thead th { padding: 11px 16px; text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
     tbody tr { border-bottom: 1px solid var(--border); }
     tbody tr:last-child { border-bottom: none; }
@@ -184,12 +184,12 @@
     .outcome-tag { display: inline-flex; background: #e6eeff; color: var(--blue); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: var(--r-pill); border: 1px solid rgba(3,91,255,.15); }
 
     /* CTA BANNER */
-    .cta-banner { border: 1px solid rgba(3,91,255,.15); border-radius: var(--r-card); background: linear-gradient(135deg, #041a2f 0%, #0d2d55 100%); color: #fff; padding: 32px 36px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin: 40px 0; position: relative; overflow: hidden; }
-    .cta-banner::before { content:''; position:absolute; top:-40px; right:-40px; width:200px; height:200px; background:radial-gradient(circle, rgba(3,91,255,.3) 0%, transparent 65%); pointer-events:none; }
-    .cta-banner-text strong { display: block; font-size: 16px; font-weight: 700; margin-bottom: 5px; }
-    .cta-banner-text p { font-size: 14px; opacity: .7; margin: 0; }
-    .btn-ghost-inv { background: var(--blue); border: none; color: #fff; padding: 11px 22px; border-radius: var(--r-pill); font-size: 14px; font-weight: 600; white-space: nowrap; flex-shrink: 0; cursor: pointer; transition: all .18s; display: inline-flex; align-items: center; gap: 6px; font-family: inherit; }
-    .btn-ghost-inv:hover { background: #0248d4; transform: translateY(-1px); }
+    .cta-banner { border: 1px solid #fbbf24; border-radius: var(--r-card); background: #fffbeb; color: #111111; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin: 40px 0; position: relative; overflow: hidden; }
+    .cta-banner::before { display: none; }
+    .cta-banner-text strong { display: block; font-size: 22px; font-weight: 800; margin-bottom: 8px; color: #111111; }
+    .cta-banner-text p { font-size: 16px; color: #555555; margin: 0; }
+    .btn-ghost-inv { background: #111111; border: none; color: #fff; padding: 13px 28px; border-radius: var(--r-pill); font-size: 15px; font-weight: 700; white-space: nowrap; flex-shrink: 0; cursor: pointer; transition: all .18s; display: inline-flex; align-items: center; gap: 6px; font-family: inherit; }
+    .btn-ghost-inv:hover { background: #333333; transform: translateY(-1px); }
 
     /* HERO AI ROW */
     .hero-ai-row { display: flex; justify-content: flex-end; align-items: center; gap: 8px; margin-bottom: 16px; }
@@ -224,10 +224,10 @@
     .toc-list a { font-size: 13px; color: var(--text-3); display: block; padding: 5px 12px; border-left: 2px solid transparent; line-height: 1.4; transition: all .15s; border-radius: 0 6px 6px 0; }
     .toc-list a:hover { color: var(--navy); background: rgba(3,91,255,.04); border-left-color: rgba(3,91,255,.3); }
     .toc-list a.active { color: var(--blue); background: rgba(3,91,255,.07); border-left-color: var(--blue); font-weight: 600; }
-    .sidebar-cta { border-radius: var(--r-card); padding: 20px; background: linear-gradient(135deg, #041a2f 0%, #0a2a4a 100%); color: #fff; position: relative; overflow: hidden; }
-    .sidebar-cta::before { content:''; position:absolute; top:-30px; right:-30px; width:120px; height:120px; background:radial-gradient(circle, rgba(3,91,255,.25) 0%, transparent 70%); }
-    .sidebar-cta h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; color: #fff; position: relative; }
-    .sidebar-cta p { font-size: 13px; opacity: .6; margin-bottom: 16px; position: relative; }
+    .sidebar-cta { border-radius: var(--r-card); padding: 20px; background: #eff4ff; border: 1px solid rgba(3,91,255,.2); color: var(--navy); position: relative; overflow: hidden; }
+    .sidebar-cta::before { display: none; }
+    .sidebar-cta h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; color: var(--navy); position: relative; }
+    .sidebar-cta p { font-size: 13px; color: #394960; margin-bottom: 16px; position: relative; }
     .sidebar-cta a { display: block; background: var(--blue); color: #fff; text-align: center; padding: 9px; border-radius: var(--r-sm); font-size: 13px; font-weight: 600; transition: opacity .2s; position: relative; }
     .sidebar-cta a:hover { opacity: .88; }
     .share-card { border: 1px solid var(--border); border-radius: var(--r-card); padding: 18px; background: var(--bg); }
@@ -409,16 +409,16 @@
           <div class="graphic-wrap fade-up" aria-label="Medical device market growth visualization">
             <svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;padding:1.5rem 2rem 0;">
               <defs>
-                <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#041a2f"/><stop offset="100%" stop-color="#394960"/></linearGradient>
-                <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#798099"/><stop offset="100%" stop-color="#798099"/></linearGradient>
+                <linearGradient id="bar1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#035bff"/><stop offset="100%" stop-color="#4d8cff"/></linearGradient>
+                <linearGradient id="bar2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#6fa3ff"/><stop offset="100%" stop-color="#b3caff"/></linearGradient>
               </defs>
               <!-- Title -->
-              <text x="360" y="18" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#041a2f">Market Size: Medical Devices vs Home Healthcare (USD Billions)</text>
+              <text x="360" y="18" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#111111">Market Size: Medical Devices vs Home Healthcare (USD Billions)</text>
               <!-- Y axis labels -->
-              <text x="46" y="175" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#798099">0</text>
-              <text x="46" y="130" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#798099">300</text>
-              <text x="46" y="85" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#798099">600</text>
-              <text x="46" y="40" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#798099">900</text>
+              <text x="46" y="175" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#888888">0</text>
+              <text x="46" y="130" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#888888">300</text>
+              <text x="46" y="85" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#888888">600</text>
+              <text x="46" y="40" text-anchor="end" font-family="Inter,sans-serif" font-size="9" fill="#888888">900</text>
               <!-- Grid lines -->
               <line x1="52" y1="175" x2="700" y2="175" stroke="#e2e6ed" stroke-width="1"/>
               <line x1="52" y1="130" x2="700" y2="130" stroke="#e2e6ed" stroke-width="1" stroke-dasharray="4,3"/>
@@ -426,32 +426,32 @@
               <line x1="52" y1="40" x2="700" y2="40" stroke="#e2e6ed" stroke-width="1" stroke-dasharray="4,3"/>
               <!-- Medical Devices 2024: 580/900 * 135 = 87 height -->
               <rect x="90" y="88" width="80" height="87" fill="url(#bar1)" rx="4"/>
-              <text x="130" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">$580B</text>
-              <text x="130" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">Med Devices</text>
-              <text x="130" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">2024</text>
+              <text x="130" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#111111">$580B</text>
+              <text x="130" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">Med Devices</text>
+              <text x="130" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">2024</text>
               <!-- Medical Devices 2030: 820/900 * 135 = 123 height -->
-              <rect x="200" y="52" width="80" height="123" fill="url(#bar1)" rx="4" opacity=".75"/>
-              <text x="240" y="46" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">$820B</text>
-              <text x="240" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">Med Devices</text>
-              <text x="240" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">2030 (proj.)</text>
+              <rect x="200" y="52" width="80" height="123" fill="url(#bar1)" rx="4" opacity=".85"/>
+              <text x="240" y="46" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#111111">$820B</text>
+              <text x="240" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">Med Devices</text>
+              <text x="240" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">2030 (proj.)</text>
               <!-- Arrow between bars -->
-              <text x="188" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#041a2f">+41%</text>
+              <text x="188" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#035bff">+41%</text>
               <!-- Home Healthcare 2023: 390/900 * 135 = 58.5 -->
               <rect x="380" y="117" width="80" height="58" fill="url(#bar2)" rx="4"/>
-              <text x="420" y="111" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">$390B</text>
-              <text x="420" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">Home Health</text>
-              <text x="420" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">2023</text>
+              <text x="420" y="111" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#111111">$390B</text>
+              <text x="420" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">Home Health</text>
+              <text x="420" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">2023</text>
               <!-- Home Healthcare 2032: 666/900 * 135 = 99.9 -->
-              <rect x="490" y="75" width="80" height="100" fill="url(#bar2)" rx="4" opacity=".75"/>
-              <text x="530" y="69" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">$666B</text>
-              <text x="530" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">Home Health</text>
-              <text x="530" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#798099">2032 (proj.)</text>
-              <text x="478" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#041a2f">+71%</text>
+              <rect x="490" y="75" width="80" height="100" fill="url(#bar2)" rx="4" opacity=".85"/>
+              <text x="530" y="69" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#111111">$666B</text>
+              <text x="530" y="190" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">Home Health</text>
+              <text x="530" y="200" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888888">2032 (proj.)</text>
+              <text x="478" y="118" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#035bff">+71%</text>
               <!-- Legend -->
-              <rect x="610" y="60" width="12" height="12" fill="#041a2f" rx="2"/>
-              <text x="626" y="71" font-family="Inter,sans-serif" font-size="9" fill="#798099">Medical Devices</text>
-              <rect x="610" y="80" width="12" height="12" fill="#798099" rx="2"/>
-              <text x="626" y="91" font-family="Inter,sans-serif" font-size="9" fill="#798099">Home Healthcare</text>
+              <rect x="610" y="60" width="12" height="12" fill="#035bff" rx="2"/>
+              <text x="626" y="71" font-family="Inter,sans-serif" font-size="9" fill="#888888">Medical Devices</text>
+              <rect x="610" y="80" width="12" height="12" fill="#6fa3ff" rx="2"/>
+              <text x="626" y="91" font-family="Inter,sans-serif" font-size="9" fill="#888888">Home Healthcare</text>
             </svg>
             <div class="graphic-caption">Sources: Fortune Business Insights, GM Insights. All figures in USD billions.</div>
           </div>
@@ -503,45 +503,45 @@
           <!-- SHIFTS SVG -->
           <div class="graphic-wrap fade-up" aria-label="Behavioral shifts diagram">
             <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;padding:1.25rem 1.5rem 0;">
-              <text x="350" y="18" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#041a2f">Six Behavioral Shifts in Medical Devices & Home Healthcare</text>
+              <text x="350" y="18" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#111111">Six Behavioral Shifts in Medical Devices & Home Healthcare</text>
               <!-- 6 cards: 2 rows x 3 cols -->
               <!-- Row 1 -->
               <!-- Card 1 -->
               <rect x="20" y="32" width="200" height="100" rx="10" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="30" y="55" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">Personalized Patient Engagement</text>
+              <text x="30" y="55" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#111111">Personalized Patient Engagement</text>
               <foreignObject x="26" y="60" width="188" height="66">
-                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#71717a;line-height:1.5">Patients and caregivers now expect condition-specific nudges, refill reminders, and rewards not generic brand touchpoints.</div>
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#444444;line-height:1.5">Patients and caregivers now expect condition-specific nudges, refill reminders, and rewards not generic brand touchpoints.</div>
               </foreignObject>
               <!-- Card 2 -->
               <rect x="250" y="32" width="200" height="100" rx="10" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="260" y="55" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">Clinician-Led Discovery</text>
+              <text x="260" y="55" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#111111">Clinician-Led Discovery</text>
               <foreignObject x="256" y="60" width="188" height="66">
-                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#71717a;line-height:1.5">Doctors, nurses, and pharmacists now drive adoption through recommendations and real-world outcomes not advertising.</div>
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#444444;line-height:1.5">Doctors, nurses, and pharmacists now drive adoption through recommendations and real-world outcomes not advertising.</div>
               </foreignObject>
               <!-- Card 3 -->
               <rect x="480" y="32" width="200" height="100" rx="10" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="490" y="55" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">Mobile-First Education</text>
+              <text x="490" y="55" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#111111">Mobile-First Education</text>
               <foreignObject x="486" y="60" width="188" height="66">
-                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#71717a;line-height:1.5">QR-based demos, setup videos, and tele-support are now table stakes both in-store and at home.</div>
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#444444;line-height:1.5">QR-based demos, setup videos, and tele-support are now table stakes both in-store and at home.</div>
               </foreignObject>
               <!-- Row 2 -->
               <!-- Card 4 -->
-              <rect x="20" y="152" width="200" height="100" rx="10" fill="#041a2f"/>
-              <text x="30" y="175" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#ffffff">Gamification for Field Teams</text>
+              <rect x="20" y="152" width="200" height="100" rx="10" fill="#eff4ff" stroke="rgba(3,91,255,.2)" stroke-width="1"/>
+              <text x="30" y="175" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">Gamification for Field Teams</text>
               <foreignObject x="26" y="180" width="188" height="66">
-                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:rgba(255,255,255,.65);line-height:1.5">Leaderboards and performance-based incentives motivate pharmacy staff and reps more than fixed commissions ever did.</div>
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#394960;line-height:1.5">Leaderboards and performance-based incentives motivate pharmacy staff and reps more than fixed commissions ever did.</div>
               </foreignObject>
               <!-- Card 5 -->
-              <rect x="250" y="152" width="200" height="100" rx="10" fill="#041a2f"/>
-              <text x="260" y="175" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#ffffff">Care-Bundle Adoption</text>
+              <rect x="250" y="152" width="200" height="100" rx="10" fill="#eff4ff" stroke="rgba(3,91,255,.2)" stroke-width="1"/>
+              <text x="260" y="175" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">Care-Bundle Adoption</text>
               <foreignObject x="256" y="180" width="188" height="66">
-                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:rgba(255,255,255,.65);line-height:1.5">Bundled solutions devices, consumables, monitoring, and support drive better patient outcomes and higher lifetime value.</div>
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#394960;line-height:1.5">Bundled solutions devices, consumables, monitoring, and support drive better patient outcomes and higher lifetime value.</div>
               </foreignObject>
               <!-- Card 6 -->
-              <rect x="480" y="152" width="200" height="100" rx="10" fill="#041a2f"/>
-              <text x="490" y="175" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#ffffff">Service as a Trust Signal</text>
+              <rect x="480" y="152" width="200" height="100" rx="10" fill="#eff4ff" stroke="rgba(3,91,255,.2)" stroke-width="1"/>
+              <text x="490" y="175" font-family="Inter,sans-serif" font-size="10" font-weight="700" fill="#041a2f">Service as a Trust Signal</text>
               <foreignObject x="486" y="180" width="188" height="66">
-                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:rgba(255,255,255,.65);line-height:1.5">Onboarding experience, warranty handling, and remote troubleshooting now strongly influence long-term brand loyalty.</div>
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:9px;color:#394960;line-height:1.5">Onboarding experience, warranty handling, and remote troubleshooting now strongly influence long-term brand loyalty.</div>
               </foreignObject>
             </svg>
             <div class="graphic-caption">Six behavioral shifts reshaping engagement and loyalty in medical devices and home healthcare.</div>
@@ -601,63 +601,63 @@
           <div class="graphic-wrap fade-up" aria-label="5-journey engagement framework diagram">
             <svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;padding:1.5rem 1.5rem 0;">
               <!-- Title -->
-              <text x="360" y="16" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#041a2f">The 5-Journey Engagement Framework</text>
+              <text x="360" y="16" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#111111">The 5-Journey Engagement Framework</text>
 
               <!-- Stage boxes -->
               <!-- Stage 1: Acquisition -->
               <rect x="20" y="34" width="118" height="110" rx="10" fill="#041a2f"/>
               <text x="79" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" fill="rgba(255,255,255,.15)">1</text>
               <text x="79" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#ffffff">Acquisition</text>
-              <text x="79" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)">First entry into</text>
-              <text x="79" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)">the brand ecosystem</text>
-              <text x="79" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">Onboarding kits</text>
-              <text x="79" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">Training programs</text>
+              <text x="79" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.7)">First entry into</text>
+              <text x="79" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.7)">the brand ecosystem</text>
+              <text x="79" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.55)">Onboarding kits</text>
+              <text x="79" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.55)">Training programs</text>
 
               <!-- Arrow 1 -->
               <path d="M140 89 L152 89" stroke="#e2e6ed" stroke-width="2" marker-end="url(#arr)"/>
 
               <!-- Stage 2: Activation -->
-              <rect x="154" y="34" width="118" height="110" rx="10" fill="#394960"/>
+              <rect x="154" y="34" width="118" height="110" rx="10" fill="#1a3b8a"/>
               <text x="213" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" fill="rgba(255,255,255,.12)">2</text>
               <text x="213" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#ffffff">Activation</text>
-              <text x="213" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)">Interest converts</text>
-              <text x="213" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)">into real action</text>
-              <text x="213" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">Device registration</text>
-              <text x="213" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">First certifications</text>
+              <text x="213" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.7)">Interest converts</text>
+              <text x="213" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.7)">into real action</text>
+              <text x="213" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.55)">Device registration</text>
+              <text x="213" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.55)">First certifications</text>
 
               <!-- Arrow 2 -->
               <path d="M274 89 L286 89" stroke="#e2e6ed" stroke-width="2" marker-end="url(#arr)"/>
 
               <!-- Stage 3: Engagement -->
-              <rect x="288" y="34" width="118" height="110" rx="10" fill="#798099"/>
+              <rect x="288" y="34" width="118" height="110" rx="10" fill="#035bff"/>
               <text x="347" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" fill="rgba(255,255,255,.12)">3</text>
               <text x="347" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#ffffff">Engagement</text>
-              <text x="347" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)">Building habit</text>
-              <text x="347" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.6)">and trust</text>
-              <text x="347" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">Loyalty tiers</text>
-              <text x="347" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.45)">Gamified challenges</text>
+              <text x="347" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.8)">Building habit</text>
+              <text x="347" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.8)">and trust</text>
+              <text x="347" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.65)">Loyalty tiers</text>
+              <text x="347" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.65)">Gamified challenges</text>
 
               <!-- Arrow 3 -->
               <path d="M408 89 L420 89" stroke="#e2e6ed" stroke-width="2" marker-end="url(#arr)"/>
 
               <!-- Stage 4: Performance -->
-              <rect x="422" y="34" width="118" height="110" rx="10" fill="#798099"/>
+              <rect x="422" y="34" width="118" height="110" rx="10" fill="#4d8cff"/>
               <text x="481" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" fill="rgba(255,255,255,.15)">4</text>
               <text x="481" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#ffffff">Performance</text>
-              <text x="481" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.7)">Results-driven</text>
-              <text x="481" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.7)">excellence</text>
-              <text x="481" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.55)">KPI-linked rewards</text>
-              <text x="481" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.55)">Live leaderboards</text>
+              <text x="481" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.85)">Results-driven</text>
+              <text x="481" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="rgba(255,255,255,.85)">excellence</text>
+              <text x="481" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.7)">KPI-linked rewards</text>
+              <text x="481" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="rgba(255,255,255,.7)">Live leaderboards</text>
 
               <!-- Arrow 4 -->
               <path d="M542 89 L554 89" stroke="#e2e6ed" stroke-width="2" marker-end="url(#arr)"/>
 
               <!-- Stage 5: Retention -->
-              <rect x="556" y="34" width="144" height="110" rx="10" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
+              <rect x="556" y="34" width="144" height="110" rx="10" fill="#eff4ff" stroke="rgba(3,91,255,.2)" stroke-width="1"/>
               <text x="628" y="60" text-anchor="middle" font-family="Inter,sans-serif" font-size="22" fill="rgba(0,0,0,.06)">5</text>
               <text x="628" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#041a2f">Retention</text>
-              <text x="628" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#798099">Long-term loyalty</text>
-              <text x="628" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#798099">and advocacy</text>
+              <text x="628" y="96" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Long-term loyalty</text>
+              <text x="628" y="108" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">and advocacy</text>
               <text x="628" y="126" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#798099">VIP programs</text>
               <text x="628" y="138" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#798099">Ambassador pathways</text>
 
@@ -701,11 +701,11 @@
           <!-- INCENTIVE FLOWCHART SVG -->
           <div class="graphic-wrap fade-up" aria-label="Incentive design flowchart">
             <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;padding:1.5rem 1.5rem 0;">
-              <text x="360" y="16" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#041a2f">Incentive Design: Persona to Action to Reward</text>
+              <text x="360" y="16" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#111111">Incentive Design: Persona to Action to Reward</text>
               <!-- Column headers -->
-              <text x="80" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#798099" text-transform="uppercase">PERSONA</text>
-              <text x="310" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#798099">ACTION REWARDED</text>
-              <text x="570" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#798099">REWARD TYPE</text>
+              <text x="80" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#555555" text-transform="uppercase">PERSONA</text>
+              <text x="310" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#555555">ACTION REWARDED</text>
+              <text x="570" y="38" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#555555">REWARD TYPE</text>
               <!-- Divider -->
               <line x1="20" y1="45" x2="700" y2="45" stroke="#e2e6ed" stroke-width="1"/>
               <!-- Row 1 -->
@@ -713,39 +713,39 @@
               <text x="80" y="69" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#ffffff">Patients</text>
               <path d="M142 65 L200 65" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="202" y="52" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="307" y="69" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Device reg, refill adherence, care completion</text>
+              <text x="307" y="69" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Device reg, refill adherence, care completion</text>
               <path d="M414 65 L470 65" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="472" y="52" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="577" y="69" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Pharmacy credits, care bundles, VIP support</text>
+              <text x="577" y="69" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Pharmacy credits, care bundles, VIP support</text>
               <!-- Row 2 -->
-              <rect x="20" y="86" width="120" height="26" rx="5" fill="#394960"/>
+              <rect x="20" y="86" width="120" height="26" rx="5" fill="#1a3b8a"/>
               <text x="80" y="103" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#ffffff">Pharmacy Staff</text>
               <path d="M142 99 L200 99" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="202" y="86" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="307" y="103" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Premium device rec, certifications, counseling</text>
+              <text x="307" y="103" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Premium device rec, certifications, counseling</text>
               <path d="M414 99 L470 99" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="472" y="86" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="577" y="103" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Bonus payouts, leaderboard recognition, tiers</text>
+              <text x="577" y="103" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Bonus payouts, leaderboard recognition, tiers</text>
               <!-- Row 3 -->
-              <rect x="20" y="120" width="120" height="26" rx="5" fill="#798099"/>
+              <rect x="20" y="120" width="120" height="26" rx="5" fill="#035bff"/>
               <text x="80" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#ffffff">Distributors</text>
               <path d="M142 133 L200 133" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="202" y="120" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="307" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Volume growth, territory expansion, new launches</text>
+              <text x="307" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Volume growth, territory expansion, new launches</text>
               <path d="M414 133 L470 133" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="472" y="120" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="577" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Slab rebates, exclusive allocations, tier upgrades</text>
+              <text x="577" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Slab rebates, exclusive allocations, tier upgrades</text>
               <!-- Row 4 -->
-              <rect x="20" y="154" width="120" height="26" rx="5" fill="#798099"/>
+              <rect x="20" y="154" width="120" height="26" rx="5" fill="#4d8cff"/>
               <text x="80" y="171" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#ffffff">Sales Teams</text>
               <path d="M142 167 L200 167" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="202" y="154" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="307" y="171" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Quota attainment, new accounts, product mix</text>
+              <text x="307" y="171" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Quota attainment, new accounts, product mix</text>
               <path d="M414 167 L470 167" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="472" y="154" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
-              <text x="577" y="171" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#394960">Live leaderboards, milestone payouts, awards</text>
+              <text x="577" y="171" text-anchor="middle" font-family="Inter,sans-serif" font-size="8.5" fill="#1a1a1a">Live leaderboards, milestone payouts, awards</text>
               <!-- Row 5 -->
-              <rect x="20" y="188" width="120" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
+              <rect x="20" y="188" width="120" height="26" rx="5" fill="#eff4ff" stroke="rgba(3,91,255,.2)" stroke-width="1"/>
               <text x="80" y="205" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="#041a2f">Mfg. Workforce</text>
               <path d="M142 201 L200 201" stroke="#e2e6ed" stroke-width="1.5" marker-end="url(#a2)"/>
               <rect x="202" y="188" width="210" height="26" rx="5" fill="#f6f7f9" stroke="#e2e6ed" stroke-width="1"/>
