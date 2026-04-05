@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO Problems — Evidence Report</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f5f5f5; color: #1a1a1a; }
+  .page-header { background: #041a2f; color: #fff; padding: 32px 48px; }
+  .page-header h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .page-header p { font-size: 13px; opacity: .6; }
+  .section-header { background: #fff; border-bottom: 3px solid #035bff; padding: 20px 48px; display: flex; align-items: center; gap: 12px; margin-top: 32px; }
+  .section-header .page-label { background: #035bff; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
+  .section-header h2 { font-size: 16px; font-weight: 700; color: #041a2f; }
+  .problems { padding: 0 48px 48px; }
+  .problem { background: #fff; border-radius: 8px; border: 1px solid #e2e6ed; margin-top: 16px; overflow: hidden; }
+  .problem-header { padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #f0f0f0; }
+  .severity { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .06em; flex-shrink: 0; margin-top: 2px; }
+  .sev-critical { background: #fee2e2; color: #b91c1c; }
+  .sev-high { background: #fef3c7; color: #b45309; }
+  .sev-medium { background: #e0f2fe; color: #0369a1; }
+  .problem-title { font-size: 14px; font-weight: 700; color: #041a2f; margin-bottom: 4px; }
+  .problem-desc { font-size: 13px; color: #394960; line-height: 1.55; }
+  .code-block { margin: 0; padding: 16px 20px; background: #0f172a; font-family: 'Cascadia Code', 'Fira Code', 'Courier New', monospace; font-size: 12px; line-height: 1.7; overflow-x: auto; }
+  .code-block .bad { color: #f87171; }
+  .code-block .good { color: #86efac; }
+  .code-block .neutral { color: #94a3b8; }
+  .code-block .highlight { background: rgba(248,113,113,.15); border-radius: 2px; padding: 1px 3px; }
+  .code-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 8px 20px 0; color: #798099; }
+  .fix-block { padding: 12px 20px 16px; background: #f6fef9; border-top: 1px solid #e2e6ed; font-size: 12px; color: #166534; line-height: 1.55; }
+  .fix-block strong { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 4px; color: #15803d; }
+  .count-badge { display: inline-flex; align-items: center; background: #fee2e2; color: #b91c1c; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>SEO Problems — Code Evidence Report</h1>
+  <p>Exact code extracted from live pages · April 2026</p>
+</div>
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PAGE 1: CONSUMER GOODS -->
+<!-- ══════════════════════════════════════════════════════ -->
+
+<div class="section-header">
+  <span class="page-label">Page 1</span>
+  <h2>Consumer Goods — xoxoday.com/industry/consumer-goods</h2>
+</div>
+
+<div class="problems">
+
+  <!-- Problem 1: Wrong meta description -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-critical">Critical</span>
+      <div>
+        <div class="problem-title">Meta description is for the wrong product — says "insurance"</div>
+        <div class="problem-desc">This is a consumer goods page. The description talks about insurance loyalty. Copied from another page and never updated. Also written with attributes in reverse order so many SEO tools never detect it exists.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;meta content="<span class="highlight">Boost insurance loyalty</span> with Xoxoday. Automate commission
+programs, enhance employee engagement, and improve retention,
+renewals, and partner trust." name="description"&gt;</span>
+
+<span class="neutral">↑ Attribute order is reversed: content= before name=
+  Standard parsers expect name= first. Many SEO audit tools
+  will report this page as having NO meta description.</span></pre>
+    <div class="fix-block">
+      <strong>What it should say</strong>
+      &lt;meta name="description" content="Xoxoday powers loyalty and incentive programs for consumer goods brands. Engage customers, dealers, influencers, and sales teams all from one platform."&gt;
+    </div>
+  </div>
+
+  <!-- Problem 2: Title too short -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-critical">Critical</span>
+      <div>
+        <div class="problem-title">Title is 33 characters — no brand name, no primary keyword</div>
+        <div class="problem-desc">Google gives ~60 characters. The brand "Xoxoday" is missing entirely. The word "loyalty" — the most important keyword — is missing. This title could belong to any generic website about consumer goods.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;title&gt;Consumer Goods Incentive Programs&lt;/title&gt;</span>
+<span class="neutral">         ↑ 33 characters. No brand. No "loyalty" keyword.
+           Google shows up to ~60 characters in search results.</span></pre>
+    <div class="fix-block">
+      <strong>What it should say</strong>
+      &lt;title&gt;Consumer Goods Loyalty &amp; Incentive Programs | Xoxoday&lt;/title&gt; &nbsp;← 53 chars
+    </div>
+  </div>
+
+  <!-- Problem 3: H1 is 2 words -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-critical">Critical</span>
+      <div>
+        <div class="problem-title">H1 heading is just two words</div>
+        <div class="problem-desc">The main heading on the page is "Consumer Goods" — a category label, not a headline. It tells Google nothing about what the page offers or who it is for.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;h1 class="plum-heading-h1 no-btm"&gt;Consumer Goods&lt;/h1&gt;</span>
+<span class="neutral">         ↑ Two words. Zero keyword signal. Zero intent match.</span></pre>
+    <div class="fix-block">
+      <strong>What it should say</strong>
+      &lt;h1&gt;Consumer Goods Loyalty &amp; Incentive Programs&lt;/h1&gt;
+    </div>
+  </div>
+
+  <!-- Problem 4: No meta robots -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Meta robots tag is completely missing</div>
+        <div class="problem-desc">No robots directive anywhere on the page. Xoxoday cannot instruct Google to show large image previews in search results or AI Overviews without this tag.</div>
+      </div>
+    </div>
+    <div class="code-label">Search result in page source</div>
+    <pre class="code-block"><span class="bad">&lt;!-- NO META ROBOTS TAG FOUND ANYWHERE ON THIS PAGE --&gt;</span>
+
+<span class="neutral">  Searched entire 437KB HTML source for:
+    &lt;meta name="robots" ...&gt;
+  Result: zero matches.</span></pre>
+    <div class="fix-block">
+      <strong>What should be added</strong>
+      &lt;meta name="robots" content="index, follow, max-image-preview:large"&gt;
+    </div>
+  </div>
+
+  <!-- Problem 5: 211 empty alt images -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">211 images — all have empty alt text <span class="count-badge">211 images</span></div>
+        <div class="problem-desc">Every image on the page has alt="" — an empty description. Google cannot index any of them. Screen readers announce them as blank. This is 211 images contributing zero SEO value.</div>
+      </div>
+    </div>
+    <div class="code-label">Sample from live page (pattern repeats 211 times)</div>
+    <pre class="code-block"><span class="bad">&lt;img loading="lazy" alt="" src="https://cdn.prod.website-files.com/
+  60080cdf80021f5e4cc61c9b/677ce00a58d6846a75d1764c_xoxoday.svg"&gt;</span>
+
+<span class="bad">&lt;img loading="lazy" alt="" src="https://cdn.prod.website-files.com/
+  60080cdf80021f5e4cc61c9b/68ae8e6c069436749186bb9b_Frame.svg"&gt;</span>
+
+<span class="bad">&lt;img loading="lazy" alt="" src="https://cdn.prod.website-files.com/
+  60080cdf80021f5e4cc61c9b/68adef3837ac0b15eba1c330_Frame.svg"&gt;</span>
+
+<span class="neutral">  ... and 208 more with the same alt="" pattern.</span></pre>
+  </div>
+
+  <!-- Problem 6: Wrong schema type -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Schema markup uses wrong type — missing Service schema</div>
+        <div class="problem-desc">The page has 4 schema blocks but none of them describe what Xoxoday actually sells. A commercial SaaS product page needs Service schema so Google and AI systems understand what is being offered.</div>
+      </div>
+    </div>
+    <div class="code-label">Schema types actually present on page</div>
+    <pre class="code-block"><span class="bad">@type: "WebPage"      ← generic, not wrong but not enough
+@type: "Organization" ← company info, not product info
+@type: "BreadcrumbList" ← navigation only
+@type: "ImageObject"  ← image metadata only</span>
+
+<span class="neutral">Missing:
+  @type: "Service"    ← describes what Xoxoday sells
+  @type: "FAQPage"    ← enables AI answer extraction</span></pre>
+  </div>
+
+  <!-- Problem 7: Incomplete OG tags -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Social preview tags incomplete — missing image and URL</div>
+        <div class="problem-desc">Only 3 of 6 core fields present. og:image is missing — every LinkedIn/Slack share shows a blank preview card. og:url and og:site_name are also absent.</div>
+      </div>
+    </div>
+    <div class="code-label">OG tags present vs missing</div>
+    <pre class="code-block"><span class="good">✓ &lt;meta content="Consumer Goods Incentive Programs" property="og:title"&gt;</span>
+<span class="good">✓ &lt;meta content="Boost insurance loyalty..." property="og:description"&gt;</span>
+<span class="good">✓ &lt;meta property="og:type" content="website"&gt;</span>
+
+<span class="bad">✗ og:image    — MISSING — share preview shows blank image
+✗ og:url      — MISSING — no canonical URL for shares
+✗ og:site_name — MISSING — no brand attribution on shares</span></pre>
+  </div>
+
+</div><!-- /problems -->
+
+
+<!-- ══════════════════════════════════════════════════════ -->
+<!-- PAGE 2: BLOG -->
+<!-- ══════════════════════════════════════════════════════ -->
+
+<div class="section-header">
+  <span class="page-label">Page 2</span>
+  <h2>Medical Devices Blog — blog.xoxoday.com/medical-devices-home-healthcare-loyalty-engagement/</h2>
+</div>
+
+<div class="problems">
+
+  <!-- Problem 1: Title too long -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-critical">Critical</span>
+      <div>
+        <div class="problem-title">Title is 69 characters — gets cut off in Google search results</div>
+        <div class="problem-desc">Google truncates titles at ~60 characters. The word "Incentives" at the end is cut off. Users see an incomplete sentence in search results.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;title&gt;Medical Devices &amp; Home Healthcare Loyalty Programs and Incentives&lt;/title&gt;</span>
+<span class="neutral">         ↑ 69 characters total
+
+  What Google shows in search results:
+  "Medical Devices &amp; Home Healthcare Loyalty Programs and Inc..."
+                                                              ↑ cut here</span></pre>
+    <div class="fix-block">
+      <strong>What it should say (51 chars)</strong>
+      &lt;title&gt;Medical Device Loyalty Programs: The Complete Guide&lt;/title&gt;
+    </div>
+  </div>
+
+  <!-- Problem 2: Meta description too long -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Meta description is 181 characters — 21 over the limit</div>
+        <div class="problem-desc">Google truncates descriptions at ~160 characters. The key call to action at the end of the sentence gets cut off before users can read it.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;meta name="description" content="Discover how medical device and home
+healthcare brands drive adoption, adherence, and channel performance
+through loyalty programs, education-led engagement, and partner
+incentives."&gt;</span>
+<span class="neutral">         ↑ 181 characters. Google limit is ~160.
+           Last 21 characters are cut off in search results.</span></pre>
+  </div>
+
+  <!-- Problem 3: Duplicate H2 -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Same H2 heading used twice on the same page</div>
+        <div class="problem-desc">The exact same section heading appears at two different points in the article. Google sees duplicate headings as a structural error. Readers assume the content was not properly reviewed.</div>
+      </div>
+    </div>
+    <div class="code-label">Both instances in live HTML</div>
+    <pre class="code-block"><span class="neutral">First occurrence (position 269,132 in HTML):</span>
+<span class="bad">&lt;h2 id="the-engagement-challenge-in-medical-devices-home-healthcare-
+across-personas"&gt;The Engagement Challenge in Medical Devices &amp;
+Home Healthcare Across Personas&lt;/h2&gt;</span>
+
+<span class="neutral">Second occurrence (position 275,936 in HTML):</span>
+<span class="bad">&lt;h2 id="the-engagement-challenge-in-medical-devices-home-healthcare-
+across-personas-1"&gt;The Engagement Challenge in Medical Devices &amp;
+Home Healthcare Across Personas&lt;/h2&gt;</span>
+
+<span class="neutral">  ↑ CMS auto-appended "-1" to the ID to avoid duplication
+    but the visible heading text is identical on both.</span></pre>
+  </div>
+
+  <!-- Problem 4: Author URL 404 -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-critical">Critical</span>
+      <div>
+        <div class="problem-title">Author URL in schema points directly to a 404 page</div>
+        <div class="problem-desc">The structured data for this article lists the author's URL as the site's own 404 error page. This is not an inference — the code literally contains "/404/" as the author link.</div>
+      </div>
+    </div>
+    <div class="code-label">Author block from live JSON-LD schema</div>
+    <pre class="code-block"><span class="bad">"author": {
+  "@type": "Person",
+  "name": "Xoxoday Team",
+  "url": "https://blog.xoxoday.com/404/",
+  "sameAs": []
+}</span>
+
+<span class="neutral">  ↑ "url" points to the 404 error page
+  ↑ "sameAs" is empty — no LinkedIn, no Twitter, no identity
+  ↑ "name" is "Xoxoday Team" — not a real person's name</span></pre>
+  </div>
+
+  <!-- Problem 5: twitter:site = @ghost -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Twitter/X brand tag set to "@ghost" — the CMS default</div>
+        <div class="problem-desc">Every share of this article on X/Twitter credits "@ghost" (a CMS company) as the publisher, not Xoxoday. This is the out-of-the-box Ghost CMS value that was never updated.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;meta name="twitter:site" content="@ghost"&gt;</span>
+<span class="neutral">                                    ↑ Ghost CMS default. Should be @Xoxoday.</span></pre>
+    <div class="fix-block">
+      <strong>What it should say</strong>
+      &lt;meta name="twitter:site" content="@Xoxoday"&gt;
+    </div>
+  </div>
+
+  <!-- Problem 6: Viewport maximum-scale -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Mobile zoom is disabled</div>
+        <div class="problem-desc">The viewport tag contains maximum-scale=1 which prevents users from pinching to zoom on mobile. On a 5,000-word article with tables, this is a serious usability problem. Google flags this as a mobile accessibility violation.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;meta name="viewport" content="width=device-width, initial-scale=1,
+<span class="highlight">maximum-scale=1</span>"&gt;</span>
+<span class="neutral">                                                           ↑ blocks pinch-to-zoom</span></pre>
+    <div class="fix-block">
+      <strong>What it should say</strong>
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    </div>
+  </div>
+
+  <!-- Problem 7: 3 jQuery versions -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-critical">Critical</span>
+      <div>
+        <div class="problem-title">jQuery loaded 3 times — three different versions simultaneously</div>
+        <div class="problem-desc">The same JavaScript library (jQuery) is loaded in version 1.12.4, 3.5.1, and 3.6.0 on the same page. The browser downloads all three before rendering. This alone adds several seconds to page load time.</div>
+      </div>
+    </div>
+    <div class="code-label">All three jQuery script tags from live page</div>
+    <pre class="code-block"><span class="bad">&lt;script defer src="https://ajax.googleapis.com/ajax/libs/jquery/
+  <span class="highlight">1.12.4</span>/jquery.min.js"&gt;&lt;/script&gt;</span>
+
+<span class="bad">&lt;script defer src="https://code.jquery.com/jquery-<span class="highlight">3.6.0</span>.min.js"&gt;
+&lt;/script&gt;</span>
+
+<span class="bad">&lt;script defer src="https://d3e54v103j8qbb.cloudfront.net/js/
+  jquery-<span class="highlight">3.5.1</span>.min.dc5e7f18c8.js"&gt;&lt;/script&gt;</span>
+
+<span class="neutral">  ↑ Three versions of the same library. Only one should exist.</span></pre>
+  </div>
+
+  <!-- Problem 8: Tailwind CDN -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-critical">Critical</span>
+      <div>
+        <div class="problem-title">Tailwind CSS CDN loads ~4MB of unused CSS</div>
+        <div class="problem-desc">The CDN version of Tailwind loads every utility class that exists — about 4 megabytes. This page uses roughly 1% of it. The other 99% downloads anyway and blocks rendering until complete.</div>
+      </div>
+    </div>
+    <div class="code-label">Live code on page right now</div>
+    <pre class="code-block"><span class="bad">&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span>
+<span class="neutral">              ↑ CDN version = full unoptimised build
+                ~4MB of CSS loaded. Page uses &lt;1% of it.
+                Blocks render until fully downloaded.</span></pre>
+  </div>
+
+  <!-- Problem 9: Tocbot loaded twice -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Table of contents script loaded twice — exact same URL</div>
+        <div class="problem-desc">Tocbot (the library that powers the "On This Page" sidebar) is loaded twice from the identical URL. Double execution causes double event listeners and can create unpredictable TOC behaviour.</div>
+      </div>
+    </div>
+    <div class="code-label">Both script tags from live page</div>
+    <pre class="code-block"><span class="bad">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/
+  4.12.3/tocbot.min.js"&gt;&lt;/script&gt;</span>
+
+<span class="bad">&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/
+  4.12.3/tocbot.min.js"&gt;&lt;/script&gt;</span>
+
+<span class="neutral">  ↑ Identical URL. Loaded twice. Should appear once.</span></pre>
+  </div>
+
+  <!-- Problem 10: Schema type Article -->
+  <div class="problem">
+    <div class="problem-header">
+      <span class="severity sev-high">High</span>
+      <div>
+        <div class="problem-title">Schema type is "Article" — should be "BlogPosting"</div>
+        <div class="problem-desc">Google and AI systems treat Article and BlogPosting differently for rich result eligibility and content classification. BlogPosting is the correct type for a blog post.</div>
+      </div>
+    </div>
+    <div class="code-label">Schema block from live page (abbreviated)</div>
+    <pre class="code-block"><span class="bad">{
+  "@context": "https://schema.org",
+  "@type": "<span class="highlight">Article</span>",
+  "headline": "Medical Devices & Home Healthcare...",
+  ...
+}</span>
+
+<span class="neutral">  ↑ Should be "@type": "BlogPosting"</span></pre>
+    <div class="fix-block">
+      <strong>Fix</strong>
+      Change "@type": "Article" → "@type": "BlogPosting"
+    </div>
+  </div>
+
+</div><!-- /problems -->
+
+</body>
+</html>
