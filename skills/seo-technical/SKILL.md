@@ -9,7 +9,7 @@ user-invokable: true
 argument-hint: "[url]"
 license: MIT
 metadata:
-  author: AgriciDaniel
+  author: Ashiwni
   version: "1.7.0"
   category: seo
 ---
