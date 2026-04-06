@@ -11,7 +11,7 @@ user-invokable: true
 argument-hint: "[url or file path] [brand reference file (optional)]"
 license: MIT
 metadata:
-  author: Xoxoday SEO Team
+  author: Ashwini
   version: "1.0.0"
   category: seo
 ---
