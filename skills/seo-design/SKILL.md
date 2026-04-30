@@ -54,7 +54,7 @@ Before auditing or rebuilding a page, extract the brand's design tokens.
 2. Read CSS custom properties in `:root {}` or equivalent
 3. Extract: primary colors, secondary colors, background colors, text colors, border radius, font stacks
 
-### Xoxoday Brand Tokens (Reference Implementation)
+### Extracted Brand Tokens (Reference Implementation)
 
 ```css
 :root {
@@ -86,22 +86,9 @@ Before auditing or rebuilding a page, extract the brand's design tokens.
 }
 ```
 
-### Colored-Dots Wordmark (Xoxoday-specific)
+### Colored-Dots Wordmark (Extracted-specific)
 
-The Xoxoday logo in HTML contexts uses colored letters, not an image SVG:
-
-```html
-<a href="/" class="xo-logo">
-  X<span class="dot-r">o</span>x<span class="dot-o">o</span>d<span class="dot-b">a</span>y
-</a>
-```
-
-```css
-.xo-logo       { font-weight: 700; font-size: 1.5rem; color: var(--navy); letter-spacing: -.02em; }
-.xo-logo .dot-r { color: #e63946; }   /* red o */
-.xo-logo .dot-o { color: var(--orange); }  /* orange o */
-.xo-logo .dot-b { color: var(--blue); }    /* blue a */
-```
+The Extraction logo in HTML contexts uses colored letters, not an image SVG:
 
 ---
 
@@ -111,7 +98,7 @@ The Xoxoday logo in HTML contexts uses colored letters, not an image SVG:
 
 **Check for:**
 - Color values match the brand's defined palette (hex-exact, not approximate)
-- Font family matches brand guidelines (Inter for Xoxoday, not system sans-serif fallback)
+- Font family matches brand guidelines (Inter for Extracted, not system sans-serif fallback)
 - Logo implementation: wordmark vs SVG vs icon — matches brand usage rules
 - Header and footer match the live brand site exactly
 - No legacy design system tokens mixed in (e.g., zinc-gray shadcn tokens on a navy brand)
